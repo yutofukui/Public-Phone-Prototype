@@ -91,8 +91,6 @@ export class DegradeGraph {
         this.noiseGain.gain.setTargetAtTime(noiseVal, now, rampTime);
         this.feedback.gain.setTargetAtTime(feedbackVal, now, rampTime);
 
-        const dropoutThreshold = 0.98 - (0.05 * p * 10);
-
         const currentProb = 0.0 + (0.05 * Math.pow(p, 2));
 
         if (Math.random() < currentProb) {
