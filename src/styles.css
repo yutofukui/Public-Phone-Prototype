@@ -1,0 +1,124 @@
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --accent-color: #ff3333;
+  --highlight-color: #ffffff;
+  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.status-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.status-label.playback {
+  color: #33ccff;
+}
+
+.timer {
+  font-size: 8rem;
+  font-weight: 200;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 2rem;
+  white-space: nowrap;
+}
+
+
+button {
+  background: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #555;
+  color: #555;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #333;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--highlight-color);
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.error-msg {
+  color: var(--accent-color);
+  margin-top: 1rem;
+  font-size: 1rem;
+}
